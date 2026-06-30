@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/templates/mugdha-homepage/index.html" },
+    { "source": "/collection", "destination": "/templates/mugdha-collection/index.html" },
+    { "source": "/stores", "destination": "/templates/mugdha-stores/index.html" }
+  ]
+}
