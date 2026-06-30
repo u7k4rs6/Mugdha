@@ -1,0 +1,58 @@
+/* Mugdha motion — slow and weighted, like fabric settling.
+   One signature: the gold sheen sweep. Everything else stays quiet.
+   All motion must be disabled under prefers-reduced-motion. */
+:root {
+  /* ---- Durations ---- */
+  --motion-fast: 200ms;
+  --motion-base: 400ms;
+  --motion-slow: 700ms;
+  --motion-sheen: 1100ms;
+
+  /* ---- Easing — weighted, never bouncy ---- */
+  --ease-silk: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.2, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- The signature gold sheen gradient (sweep this across with transform) ---- */
+  --sheen-gradient: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(199, 162, 74, 0.0) 42%,
+    rgba(199, 162, 74, 0.35) 50%,
+    rgba(239, 234, 225, 0.45) 52%,
+    rgba(199, 162, 74, 0.35) 54%,
+    rgba(199, 162, 74, 0.0) 62%,
+    transparent 72%
+  );
+
+  /* ---- Shot-silk iridescence ---- */
+  --shot-silk-gradient: linear-gradient(
+    115deg,
+    rgba(17, 78, 84, 0.0) 0%,
+    rgba(17, 78, 84, 0.55) 18%,
+    rgba(141, 10, 84, 0.45) 38%,
+    rgba(199, 162, 74, 0.55) 55%,
+    rgba(141, 10, 84, 0.40) 72%,
+    rgba(17, 78, 84, 0.55) 88%,
+    rgba(17, 78, 84, 0.0) 100%
+  );
+}
+
+@keyframes mugdha-sheen-sweep {
+  from { transform: translateX(-120%) skewX(-12deg); }
+  to   { transform: translateX(120%) skewX(-12deg); }
+}
+
+@keyframes mugdha-shot-silk {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+    --motion-sheen: 0ms;
+  }
+}

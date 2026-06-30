@@ -1,0 +1,50 @@
+/* Mugdha color system.
+   Grounded in deep silk-dye color — never flat black, never warm cream.
+   Base palette named for the saree world; semantic aliases below. */
+:root {
+  /* ---- Base palette ---- */
+  --mulberry-ink: #240E15;   /* deep plum-black, dramatic ground (hero, footer) */
+  --magenta: #8D0A54;        /* the brand color, from the logo — the primary accent */
+  --kumkum: var(--magenta);  /* primary accent + key buttons (unified to the logo magenta) */
+  --peacock: #114E54;        /* deep teal, secondary jewel accent */
+  --zari: #C7A24A;           /* antique gold, precious accent — use sparingly */
+  --oyster: #EFEAE1;         /* cool ivory, content sections (not a warm cream) */
+  --smoke-taupe: #A99E92;    /* muted text, captions, fine lines */
+
+  /* ---- Tints / shades (derived, for states & layering) ---- */
+  --mulberry-ink-90: #341822;   /* raised surface on the dark ground */
+  --mulberry-ink-80: #45212e;   /* hover on dark */
+  --kumkum-60: #ab1a6e;         /* accent hover (lighter magenta) */
+  --kumkum-120: #6b073f;        /* accent press (darker magenta) */
+  --peacock-60: #1d6a70;        /* peacock hover */
+  --zari-30: rgba(199, 162, 74, 0.30);  /* hairline borders, card edges */
+  --zari-15: rgba(199, 162, 74, 0.15);  /* faintest woven-border line */
+  --oyster-70: #f4f1ea;         /* lifted ivory card on oyster */
+  --oyster-down: #e3ddd1;       /* pressed ivory */
+  --ink-on-oyster-08: rgba(36, 14, 21, 0.08); /* hairline on light */
+
+  /* ---- Semantic aliases ---- */
+  --surface-base: var(--oyster);          /* default page (content sections) */
+  --surface-dark: var(--mulberry-ink);    /* hero, footer, jewel sections */
+  --surface-card: var(--oyster-70);       /* card on light */
+  --surface-card-dark: var(--mulberry-ink-90);
+
+  --text-strong: var(--mulberry-ink);     /* headings on light */
+  --text-body: #3a2630;                   /* body on light (ink, softened) */
+  --text-muted: #6f6359;                  /* captions, meta on light */
+  --text-on-dark: var(--oyster);          /* body on dark ground */
+  --text-on-dark-muted: var(--smoke-taupe);
+
+  --accent: var(--magenta);               /* primary brand accent (logo magenta) */
+  --accent-hover: var(--kumkum-60);
+  --accent-press: var(--kumkum-120);
+  --accent-jewel: var(--peacock);         /* secondary jewel accent */
+  --accent-gold: var(--zari);             /* precious accent, sparing */
+  --brand-magenta: var(--magenta);        /* alias — the brand/logo color */
+
+  --border-hairline: var(--zari-30);      /* the saree-border gold line */
+  --border-hairline-faint: var(--zari-15);
+  --border-soft: var(--ink-on-oyster-08); /* quiet divider on light */
+
+  --focus-ring: var(--zari);              /* keyboard focus, gold */
+}

@@ -1,0 +1,25 @@
+/* Mugdha typefaces — self-hosted variable woff2 (latin subset).
+   Fraunces — high-contrast display serif (headlines, section titles only).
+   Hanken Grotesk — quiet humanist sans (body, UI, captions).
+   Sourced from Google Fonts; replace files in assets/fonts to update. */
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../assets/fonts/fraunces.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../assets/fonts/hanken-grotesk.woff2") format("woff2");
+}
+
+:root {
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+}

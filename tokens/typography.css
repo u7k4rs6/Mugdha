@@ -1,0 +1,37 @@
+/* Mugdha typography scale.
+   Display = Fraunces, used with restraint. Body = Hanken Grotesk.
+   A high-contrast serif paired with a quiet sans; let imagery carry "silk". */
+:root {
+  /* ---- Family roles ---- */
+  --type-display-family: var(--font-display);
+  --type-body-family: var(--font-body);
+
+  /* ---- Fluid display sizes (clamp: mobile -> desktop) ---- */
+  --fs-hero: clamp(2.75rem, 1.6rem + 5.6vw, 5.5rem);
+  --fs-display: clamp(2.25rem, 1.5rem + 3.4vw, 3.75rem);
+  --fs-title: clamp(1.6rem, 1.2rem + 1.8vw, 2.25rem);
+  --fs-subtitle: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem);
+
+  /* ---- Body sizes (static) ---- */
+  --fs-lg: 1.25rem;     /* 20px — lead paragraphs */
+  --fs-md: 1.0625rem;   /* 17px — default body */
+  --fs-base: 1rem;      /* 16px */
+  --fs-sm: 0.875rem;    /* 14px — captions, meta */
+  --fs-xs: 0.75rem;     /* 12px — eyebrow / kicker */
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---- Line heights ---- */
+  --leading-tight: 1.04;   /* display headlines */
+  --leading-snug: 1.18;    /* titles */
+  --leading-normal: 1.6;   /* body */
+
+  /* ---- Letter spacing ---- */
+  --tracking-display: -0.02em;  /* tighten the high-contrast serif */
+  --tracking-normal: 0;
+  --tracking-eyebrow: 0.18em;   /* uppercase kickers, widely spaced */
+}
